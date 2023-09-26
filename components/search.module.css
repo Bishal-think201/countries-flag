@@ -1,0 +1,37 @@
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.searchbar {
+	width: 40%;
+	height: 60px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	padding-left: 2rem;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+.searchContainer {
+	width: 100%;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 4.5rem;
+}
+
+.dropDown {
+	padding: 0.8rem 1rem;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+	width: 17%;
+	height: 55px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.2rem;
+}

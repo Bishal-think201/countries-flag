@@ -1,0 +1,18 @@
+.btnStyle {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  font-size: 1rem;
+}
+
+.moon {
+  filter: invert(100%) grayscale(1);
+}
+
+.marginRight {
+  margin-right: 4px;
+}
