@@ -6,7 +6,7 @@ const Search = ({ flags }: any) => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedRegion, setSelectedRegion] = useState('Filter By Region');
 
-	const filteredFlags = flags.filter((flag: any) => {
+	const filteredFlags = (flags || []).filter((flag: any) => {
 		const regionFilter =
 			selectedRegion === 'Filter By Region' || flag.region === selectedRegion;
 		const searchFilter =
@@ -16,7 +16,7 @@ const Search = ({ flags }: any) => {
 	});
 
 	const uniqueRegions = [
-		...Array.from(new Set(flags.map((flag: any) => flag.region))),
+		...Array.from(new Set((flags || []).map((flag: any) => flag.region))),
 	].sort();
 
 	const handleDropdownChange = (e: any) => {

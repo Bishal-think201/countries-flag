@@ -1,23 +1,15 @@
 type Flags = {
 	name: {
-		common: String;
+		common: string;
 	};
-	currencies: {
-		USD: {
-			name: String;
-			symbol: String;
-		};
-	};
-	capital: String;
-	idd: {
-		root: Number;
-		suffixes: [Number];
-	};
-	region: String;
-	population: String;
+	capital: [string];
+	region: string;
+	subregion: string;
+	area: number;
+	population: number;
+	timezones: [string];
 	flags: {
 		png: string;
-		svg: sting;
-		alt: String;
+		alt: string;
 	};
 };

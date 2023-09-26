@@ -9,3 +9,4 @@ const Main = ({ flags }: any) => {
 };
 
 export default Main;
+

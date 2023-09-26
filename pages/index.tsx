@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import axios from 'axios';
 import { Inter } from 'next/font/google';
 import Main from './flags';
@@ -23,7 +23,6 @@ export default function Home({ flags }: any) {
 
 export async function getServerSideProps() {
 	const result = await axios.get('https://restcountries.com/v3.1/all');
-	// const res = await fetch()
 	return {
 		props: {
 			flags: result.data,
