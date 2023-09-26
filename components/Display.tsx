@@ -7,7 +7,7 @@ const DisplaySection = ({ flags }: any) => {
 	return (
 		<>
 			<ul className={styles.flagList}>
-				{flags.map((flag: any) => (
+				{flags?.map((flag: any) => (
 					<li key={flag.name.common} className={styles.flagItem}>
 						<Link
 							href={`/flags/${encodeURIComponent(flag.name.common)}`}
