@@ -4,11 +4,12 @@ import styles from './flag.module.css';
 
 const Flag = (props: any) => {
 	const { flags } = props;
+
 	return (
 		<div className={styles.container}>
-			{(flags || []).map((flag: any) => (
-				<ul key={flag.name.common} className={styles.ulStyle}>
-					<li>
+			<ul className={styles.ulStyle}>
+				{flags?.map((flag: any, index: number) => (
+					<li key={index}>
 						<Image
 							src={flag.flags.png}
 							alt={flag.flags.alt ? flag.flags.alt : 'Flag Image'}
@@ -16,50 +17,34 @@ const Flag = (props: any) => {
 							width={600}
 							height={300}
 						/>
-					</li>
-					<li className={styles.flagName}>
-						<p>{flag.name.common}</p>
-					</li>
-					<li>
+						<p className={styles.flagName}>{flag.name.common}</p>
 						<p>
-							<span>Polpulation:</span> {flag.population}
+							<span>Population:</span> {flag.population}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Region:</span> {flag.region}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Sub Region:</span> {flag.subregion}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Capital:</span> {flag.capital}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Area:</span> {flag.area}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Time Zone:</span> {flag.timezones}
 						</p>
-					</li>
-					<li>
 						<p>
 							<span>Continents:</span> {flag.continents}
 						</p>
+						<Link href={`/`} className={styles.btnBack}>
+							Back
+						</Link>
 					</li>
-					<Link href={`/`} className={styles.btnBack}>
-						Back
-					</Link>
-				</ul>
-			))}
+				))}
+			</ul>
 		</div>
 	);
 };
